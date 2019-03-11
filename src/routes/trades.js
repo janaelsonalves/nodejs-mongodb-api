@@ -12,6 +12,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
+  console.log("Status: ", res.statusCode);
   tradeController.getOneTrade(req, res);
 });
 

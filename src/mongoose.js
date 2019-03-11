@@ -7,9 +7,12 @@ exports.run = async function() {
   mongoose
     .connect(MONGODB_URI, { useNewUrlParser: true })
     .then(() => {
-      console.log("Sucessful connection!");
+      console.log("Sucessful connection with Mongoose!");
     })
     .catch(err => {
-      console.log("Failed connection! Error: ", err);
+      console.log(
+        "Ocurred an error to try connect with Mongoose! \nError: ",
+        err
+      );
     });
 };
